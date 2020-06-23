@@ -1,6 +1,10 @@
-function moviesearch() {
-    var titleSearch
-    var settings = {
+//GLOBALS
+
+
+
+function streamSearch() {
+    const titleSearch = $(this).attr("title-name")
+    const settings = {
         "async": true,
         "crossDomain": true,
         "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + titleSearch + "&country=us",
@@ -13,12 +17,14 @@ function moviesearch() {
 
     $.ajax(settings).done(function (response) {
         console.log(response);
+        console.log(results.locations[i].display_name[i]);
     });
 }
-moviesearch();
+streamSearch();
+
 //This function is picking out what movie genre the user wants
 // $("button").on("click", 
-function idmbsearch() {
+function tmdbsearch() {
     // var mdbsearch = $(this).attr("data-mdb");
     // var mdbsearchLower = mdbsearch.toLowerCase();
     var queryURL = "https://api.themoviedb.org/3/genre/" + "movie" + "/list?api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
@@ -50,5 +56,4 @@ function idmbsearch() {
     }
     )
 };
-
-idmbsearch();
+tmdbsearch();
