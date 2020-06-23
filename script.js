@@ -1,8 +1,9 @@
 function moviesearch() {
+    var titleSearch
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=bojack&country=us",
+        "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + titleSearch + "&country=us",
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
@@ -10,19 +11,17 @@ function moviesearch() {
         }
     }
 
-    $.ajax({
-        url: settings,
-        method: "GET"
-    }).then(function (response) {
+    $.ajax(settings).done(function (response) {
         console.log(response);
     });
 }
-
 moviesearch();
-
-
-function imdbsearch() {
-    var queryURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=52cc32f4af978457c9927f10c080f307&language=en-US&page=1";
+//This function is picking out what movie genre the user wants
+// $("button").on("click", 
+function idmbsearch() {
+    // var mdbsearch = $(this).attr("data-mdb");
+    // var mdbsearchLower = mdbsearch.toLowerCase();
+    var queryURL = "https://api.themoviedb.org/3/genre/" + "movie" + "/list?api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
     console.log(queryURL)
     //Performing an Ajax request with the queryURL
     $.ajax({
@@ -31,8 +30,25 @@ function imdbsearch() {
         dataType: "jsonp"
         //after the data comes back from the request
     }).then(function (response) {
+        //making sure we are logging out our request and its functional
+        console.log(queryURL);
         console.log(response);
+        //storing the data from the ajax request in the genre variable
+        var genre = response.genre;
+        //comparing what the user input to make sure its a valid value
+        if (response.genre(mdbsearchLower) === "movie"){
+            alert("Great here are the genres for Movies:");
+        }
+        //comparing what the user input to make sure it is a valid value
+        else if (response.genre(mdbsearchLower) === "tv") {
+            alert("Great here are the genres for TV shows:")
+        }
+        //if the user input an incorrect value it would return with null and make user input again
+        else {
+            alert("invalid")
+        }
     }
-    )     
-}
-imdbsearch();
+    )
+};
+
+idmbsearch();
