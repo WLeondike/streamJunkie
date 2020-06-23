@@ -14,6 +14,21 @@ function moviesearch() {
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
-
 }
+moviesearch();
 
+function imdbsearch() {
+    var queryURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=52cc32f4af978457c9927f10c080f307&language=en-US&page=1";
+    console.log(queryURL)
+    //Performing an Ajax request with the queryURL
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+        dataType: "jsonp"
+        //after the data comes back from the request
+    }).then(function (response) {
+        console.log(response);
+    }
+    )     
+}
+imdbsearch();
