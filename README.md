@@ -1,5 +1,5 @@
 # Stream Junkie
-In this project we will be creating our own website with two APIs included. Those apis are:   
+In this project we will be creating our own website with two APIs included. Those APIs are:   
 - utelly
     - utelly is a service that will allow the search input to display the best streaming service option.
 - the movie database(tmdb)
