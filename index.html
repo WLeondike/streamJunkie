@@ -2,71 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css" class="css">
-    <title>StreamJunkie</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css" class="css">
+  <title>StreamJunkie</title>
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper teal lighten-2">
-            <a href="#" class="brand-logo center"><img class="materialboxed" width="130" src="./assets/images/SJlogo.png"></a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down teal lighten-2">
-                <li><a href="sass.html">search</a></li>
-                <li><a href="badges.html">random</a></li>
-            </ul>
-        </div>
-    </nav>
-    <section class="hero" alt="StreamJunkie hero"> </section>
-    <img class="materialboxed" width="1500" src="">
+  <nav>
+    <div class="nav-wrapper teal lighten-2">
+      <a href="#" class="brand-logo center"><img class="materialboxed" width="130" src="./assets/images/SJlogo.png"></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down teal lighten-2">
+        <li><a href="sass.html">search</a></li>
+        <li><a href="badges.html">random</a></li>
+      </ul>
+    </div>
+  </nav>
+  <container>
+    <section class="hero" alt="StreamJunkie hero"></section>
+    <!-- <img class="materialboxed" width="1500" src=""> -->
     <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
-              <label for="first_name">Movie</label>
-              <button class="btn waves-effect waves-light" type="submit" name="action">Search
-            
-              </button>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">TV Show</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="disabled" type="text" class="validate">
-              <label for="disabled">Disabled</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
-            </div>
-          </div>
-        </form>
-      </div>
-    <footer>
-        <div class="footer-copyright grey darken-1">
-            <div class="container center white-text">
-                © 2020 Copyright, inc.
-            </div>
-        </div>
-    </footer>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="movie_name" type="text" class="validate">
+            <label for="first_name">Movie</label>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Search
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+            </button>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">TV Show</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="disabled" type="text" class="validate">
+            <label for="disabled">Disabled</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </container>
+  <footer>
+    <div class="footer-copyright grey darken-1">
+      <div class="container center white-text">
+        © 2020 Copyright, inc.
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
