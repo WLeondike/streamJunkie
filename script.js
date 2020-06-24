@@ -16,7 +16,6 @@ function streamSearch() {
 
     $.ajax(settings).then(function (response) {
         console.log(response);
-
         // console.log(results.locations[i].display_name[i]);
 
     });
