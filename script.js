@@ -16,17 +16,21 @@ function streamSearch() {
 
     $.ajax(settings).then(function (response) {
         console.log(response);
-        console.log(response.locations[i].display_name[i]);
+      
+        // console.log(results.locations[i].display_name[i]);
 
     });
 }
 streamSearch();
 
+
+//This function is picking out what movie genre the user wants
 $("#data-mdb").on("click", function() {
     var mdbsearch = $("#movie_name").val();
     event.preventDefault();
     console.log(mdbsearch);
-    // var mdbsearchLower = mdbsearch.toLowerCase();
+
+    var mdbsearchLower = mdbsearch.toLowerCase();
     var queryURL = "https://api.themoviedb.org/3/genre/" + mdbsearch + "/list?api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
     console.log(queryURL)
     //Performing an Ajax request with the queryURL
@@ -59,5 +63,9 @@ $("#data-mdb").on("click", function() {
            $("#mdbDiv").html(response.genre[i])
         }
     }
+
     )   
 });
+
+    )
+};
