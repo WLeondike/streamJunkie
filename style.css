@@ -5,6 +5,9 @@ body {
 
 nav {
     box-shadow: rgba(0, 0, 0, 0.70) 2px 8px 20px 8px;
+    position: fixed;
+    top: 0;
+    z-index: +1;
 }
 
 #logo {
