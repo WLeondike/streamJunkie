@@ -62,10 +62,5 @@ $("#data-mdb").on("click", function() {
             console.log(response.genre[i]);
            $("#mdbDiv").html(response.genre[i])
         }
-    }
-
-    )   
+    })   
 });
-
-    )
-};
