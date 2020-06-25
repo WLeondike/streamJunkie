@@ -18,37 +18,39 @@
   </nav>
   <div class="container">
     <section class="hero" alt="StreamJunkie hero"></section>
-  <div class="col-6">
+
     <div class="row">
-      <label>Movie or TV Show Select</label>
-      <select class="browser-default">
-        <option value="" disabled selected>Choose your genre</option>
-        <option value="18">Comedy</option>
-        <option value="58">Horror</option>
-        <option value="20">Action</option>
-        <option value="90">Drama</option>
-      </select>
+      <div class="input-field col s2">
+        <p>Movie or TV Show</p>
+        <select class="browser-default">
+          <option value="" disabled selected>Choose your genre</option>
+          <option value="18">Comedy</option>
+          <option value="58">Horror</option>
+          <option value="20">Action</option>
+          <option value="90">Drama</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s2">
+        <input id="movie_name" type="text" class="validate">
+        <label for="movie_name">Year</label>
+        <button class="btn waves-effect waves-light black-text" style="background-color:greenyellow;" type="submit"
+          name="action">Search</button>
+      </div>
+    </div>
   </div>
+  </container>
+  <div class="row">
+    <div class="col-12 border border- m-3 rounded">
       <div class="row">
-        <div class="input-field col s6">
-          <input id="movie_name" type="text" class="validate">
-          <label for="movie_name">Year</label>
-          <button class="btn waves-effect waves-light black-text" style="background-color:greenyellow;" type="submit"
-            name="action">Search</button>
+        <div class="col-12">
+          <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
+          <img id="current-pic" src="" alt="">
         </div>
       </div>
     </div>
-    </container>
-    <div class="row">
-      <div class="col-12 border border- m-3 rounded">
-        <div class="row">
-          <div class="col-12">
-            <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
-            <img id="current-pic" src="" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
   </div>
 
 
