@@ -16,7 +16,7 @@ function streamSearch() {
 
     $.ajax(settings).then(function (response) {
         console.log(response);
-      
+
         // console.log(results.locations[i].display_name[i]);
 
     });
@@ -25,15 +25,19 @@ streamSearch();
 
 
 //This function is picking out what movie genre the user wants
-$("#data-mdb").on("click", function() {
-    var mdbsearch = $("#movie_name").val();
-    event.preventDefault();
-    console.log(mdbsearch);
 
-    var mdbsearchLower = mdbsearch.toLowerCase();
-    var queryURL = "https://api.themoviedb.org/3/genre/" + mdbsearch + "/list?api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
+$("#data-mdb").on("click", (evt) => {
+    evt.preventDefault();
+    let genreId = $("#genre").val();
+    let movieYear = $("movie_name").val();
+    
+    console.log(`Locals ${genreId} and ${movieYear}`);
+    
+    let genreId = genreId.toLowerCase();
+    //Ajax
+    var queryURL = "https://api.themoviedb.org/3/discover/movie/?with_genres=" + genreId + "&primary_release_year=" + movieYear + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
     console.log(queryURL)
-    //Performing an Ajax request with the queryURL
+
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -46,7 +50,9 @@ $("#data-mdb").on("click", function() {
         //storing the data from the ajax request in the genre variable
         var mdbsearchLower = mdbsearch.toLowerCase();
         //comparing what the user input to make sure its a valid value
+      
         if (response.genre(mdbsearchLower) === "movie"){
+
             alert("Great here are the genres for Movies:");
         }
         //comparing what the user input to make sure it is a valid value
@@ -60,7 +66,7 @@ $("#data-mdb").on("click", function() {
         //This is going to push all of the different genres to the mdbDiv
         for (var i = 0; i < response.genre.length; i++) {
             console.log(response.genre[i]);
-           $("#mdbDiv").html(response.genre[i])
+            $("#mdbDiv").html(response.genre[i])
         }
-    })   
+    })
 });

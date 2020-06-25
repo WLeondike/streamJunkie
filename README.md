@@ -1,5 +1,7 @@
 # Stream Junkie
+
 In this project we will be creating our own website with two APIs included. Those APIs are:   
+
 - utelly
     - utelly is a service that will allow the search input to display the best streaming service option.
 - the movie database(tmdb)
@@ -11,6 +13,7 @@ As a user, you would then be able to select a genre from a dropdown button in or
 
 ## Frameworks
 
+
 The frameworks used in this project are:
 - Materialize
 - HTML file
@@ -20,7 +23,9 @@ The frameworks used in this project are:
 
 ### Resources
 
+
 Check out our site here: https://wleondike.github.io/streamJunkie/
+
 
 
 
