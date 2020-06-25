@@ -1,8 +1,10 @@
 //GLOBALS
 i = 0;
 
-function streamSearch() {
-    const titleSearch = $(this).attr("title-name")
+$("usrSearch").on('click', (evt) => {
+    evt.preventDefault();
+    let titleSearch = $("#usersTitle").val().trim();
+    console.log(titleSearch);
     const settings = {
         "async": true,
         "crossDomain": true,
@@ -15,14 +17,13 @@ function streamSearch() {
     }
 
     $.ajax(settings).then(function (response) {
-        console.log(response);
+        console.log(JSON.stringify(response));
 
         // console.log(results.locations[i].display_name[i]);
 
     });
-}
-streamSearch();
 
+})
 
 //This function is picking out what movie genre the user wants
 
