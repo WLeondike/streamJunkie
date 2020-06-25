@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Fontdiner+Swanky&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" class="css">
   <title>StreamJunkie</title>
 </head>
@@ -20,14 +21,13 @@
 
   <!-- <br>
     <section alt="StreamJunkie hero"></section> -->
-    <br>
-    <br>
+  <br>
+  <br>
   <div class="container">
-
     <div class="row">
       <div class="input-field col s5">
-        <p id="m-or-t">Movie or TV Show</p>
         <select class="browser-default" name="genre_id" id="genre">
+          <p id="m-or-t"></p>
           <option value="" disabled selected>Choose your genre</option>
           <option value="35">Comedy</option>
           <option value="27">Horror</option>
@@ -35,8 +35,6 @@
           <option value="18">Drama</option>
         </select>
       </div>
-    </div>
-    <div class="row">
       <div class="input-field col s4">
         <input id="movie_name" type="text" class="validate">
         <label for="movie_name" id="relYear">Year</label>
@@ -44,15 +42,14 @@
           name="action">Search</button>
       </div>
     </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-12 border border- m-3 rounded">
-      <div class="row">
-        <div class="col-12">
-          <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
-          <img id="current-pic" src="" alt="">
-        </div>
+    <div class="row">
+      <div class="input-field col s5">
+        <input type="text" id="autocomplete-input" class="autocomplete background-color white">
+        <p id="m-or-t" class="center input-text" style="margin:0px"> Type Movie or TV Show</p>
+      </div>
+      <div class="col-6 border border- m-3 rounded">
+        <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
+        <img id="current-pic" src="" alt="">
       </div>
     </div>
   </div>
