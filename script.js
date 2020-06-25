@@ -40,5 +40,6 @@ $("button").on('click', (evt) => {
     }).then(function (response) {
         console.log(`Response for movies ${JSON.stringify(response)}`);
         //storing the data from the ajax request in the genre variable
+        console.log(response);
     })
 });
