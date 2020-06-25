@@ -20,6 +20,8 @@ The frameworks used in this project are:
 
 ### Resources
 
+Check out our site here: https://wleondike.github.io/streamJunkie/
+
 
 
 
