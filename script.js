@@ -26,7 +26,7 @@ streamSearch();
 
 //This function is picking out what movie genre the user wants
 
-$(document).on('click', (evt) => {
+$("button").on('click', (evt) => {
     evt.preventDefault();
     let genreId = $("#genre").val();
     let movieYear = $("#movie_name").val();
