@@ -13,12 +13,17 @@
 
 <body>
   <nav>
-    <div class="nav-wrapper" style="background-color: greenyellow;">
-      <a href="#" class="brand-logo center black-text" id="logo">StreamJunkie</a>
+    <div class="nav-wrapper" style="background-color: darkred">
+      <a href="#" class="brand-logo center white-text" id="logo">StreamJunkie</a>
     </div>
   </nav>
-  <div class="container col s12 m4 l3">
-    <section class="hero" alt="StreamJunkie hero"></section>
+
+  <!-- <br>
+    <section alt="StreamJunkie hero"></section> -->
+    <br>
+    <br>
+  <div class="container">
+
     <div class="row">
       <div class="input-field col s5">
         <p id="m-or-t">Movie or TV Show</p>
@@ -35,17 +40,18 @@
       <div class="input-field col s4">
         <input id="movie_name" type="text" class="validate">
         <label for="movie_name" id="relYear">Year</label>
-        <button class="btn waves-effect waves-light black-text" style="background-color:greenyellow;" type="submit"
+        <button class="btn waves-effect waves-light white-text" style="background-color: rgb(211, 22, 22)" type="submit"
           name="action">Search</button>
       </div>
     </div>
-    <div class="row user-output">
-      <div class="col-12 border border- m-3 rounded">
-        <div class="row">
-          <div class="col-12">
-            <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
-            <img id="current-pic" src="" alt="">
-          </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 border border- m-3 rounded">
+      <div class="row">
+        <div class="col-12">
+          <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
+          <img id="current-pic" src="" alt="">
         </div>
       </div>
     </div>
@@ -55,7 +61,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
-<footer class="footer-copyright center black-text" style="background-color: greenyellow;">
+<footer class="footer-copyright center white-text" style="background-color: darkred;">
   © 2020 Copyright, inc.
 </footer>
 

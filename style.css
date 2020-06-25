@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("assets/images/darkgray.jpg");
+    background-image: url("assets/images/moviePost.jpeg");
 }
 
 nav {
@@ -22,7 +22,7 @@ nav {
 }
 
 .input-field, .row {
-    background-color:  rgba(131, 131, 131, 0.712);
+    background-color:  rgba(160, 78, 78, 0.863);
 }
 
 .col {
@@ -44,5 +44,5 @@ button {
 }
 
 #m-or-t, #relYear {
-    color: greenyellow;
+    color:white;
 }
