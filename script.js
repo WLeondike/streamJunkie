@@ -1,5 +1,4 @@
 //GLOBALS
-i = 0;
 
 $("usrSearch").on('click', (evt) => {
     evt.preventDefault();
@@ -19,14 +18,13 @@ $("usrSearch").on('click', (evt) => {
     $.ajax(settings).then(function (response) {
         console.log(JSON.stringify(response));
 
-        // console.log(results.locations[i].display_name[i]);
+        console.log(response.results[i].locations[i].display_name);
 
     });
 
-})
+});
 
 //This function is picking out what movie genre the user wants
-
 $("button").on('click', (evt) => {
     evt.preventDefault();
     let genreId = $("#genre").val();
@@ -46,5 +44,5 @@ $("button").on('click', (evt) => {
         for (let i = 0; response.results[i].vote_average > 5; i++) {
             console.log(response.results[i].vote_average);
         }
-    })
+    });
 });
