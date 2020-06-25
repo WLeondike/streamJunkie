@@ -4,14 +4,14 @@ body {
 }
 
 nav {
-    
+    box-shadow: rgba(0, 0, 0, 0.70) 2px 8px 20px 8px;
 }
 
 #logo {
     font-size: xx-large;
     font-family: 'Fontdiner Swanky', cursive;
 }
-.hero{
+/* .hero{
     height: 400px;
     width: 100%;
     margin-bottom: 25px;
@@ -19,7 +19,7 @@ nav {
     background-size: cover;
     background-position: center;
     opacity: 70%;
-}
+} */
 
 .input-field, .row {
     background-color:  rgba(160, 78, 78, 0.863);
@@ -37,6 +37,7 @@ footer {
     text-align: center;
     padding-top: 20px;
     z-index: +1;
+    box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 2px 10px;
 }
 
 button {
@@ -45,4 +46,5 @@ button {
 
 #m-or-t, #relYear {
     color:white;
+    font-family: 'Fontdiner Swanky', cursive;
 }
