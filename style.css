@@ -22,7 +22,6 @@ nav {
 }
 
 .input-field, .row {
-    margin-bottom: 0px;
     background-color:  rgba(160, 78, 78, 0.863);
 }
 
@@ -46,8 +45,4 @@ button {
 
 #m-or-t, #relYear {
     color:white;
-}
-
-.year {
-    float: left;
 }
