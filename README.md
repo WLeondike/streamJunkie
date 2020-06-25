@@ -1,5 +1,7 @@
 # Stream Junkie
-In this project we will be creating our own website with two APIs included. Those apis are:   
+
+In this project we will be creating our own website with two APIs included. Those APIs are:   
+
 - utelly
     - utelly is a service that will allow the search input to display the best streaming service option.
 - the movie database(tmdb)
@@ -9,7 +11,8 @@ This will be a movie site that would allow the user to search movies titles to s
 
 As a user, you would then be able to select a genre from a dropdown button in order to filter what kind of movie or tv show you'd like to watch. Also on the form, the user would have the option to filter by year and raitings in order to refine the type of movie the user would like to see. 
 
-## Framworks
+## Frameworks
+
 
 The frameworks used in this project are:
 - Materialize
@@ -19,6 +22,10 @@ The frameworks used in this project are:
 - JavaScript(vanilla)
 
 ### Resources
+
+
+Check out our site here: https://wleondike.github.io/streamJunkie/
+
 
 
 

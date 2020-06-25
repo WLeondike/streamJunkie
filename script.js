@@ -25,6 +25,7 @@ streamSearch();
 
 
 //This function is picking out what movie genre the user wants
+
 $("#data-mdb").on("click", (evt) => {
     evt.preventDefault();
     let genreId = $("#genre").val();
@@ -48,8 +49,10 @@ $("#data-mdb").on("click", (evt) => {
         console.log(response);
         //storing the data from the ajax request in the genre variable
         var mdbsearchLower = mdbsearch.toLowerCase();
+        //comparing what the user input to make sure its a valid value
+      
+        if (response.genre(mdbsearchLower) === "movie"){
 
-        if (response.genre(mdbsearchLower) === "movie") {
             alert("Great here are the genres for Movies:");
         }
         //comparing what the user input to make sure it is a valid value
