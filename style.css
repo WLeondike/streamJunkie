@@ -15,14 +15,18 @@ nav {
     height: 400px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("./assets/images/SJlogo.png");
+    background-image: url("./assets/images/moviePost.jpeg");
     background-size: cover;
     background-position: center;
-    opacity: 30%;
+    opacity: 70%;
 }
 
 .input-field, .row {
-    background-color: whitesmoke;
+    background-color:  rgba(131, 131, 131, 0.712);
+}
+
+.col {
+    background: transparent;
 }
 
 footer {
@@ -37,4 +41,8 @@ footer {
 
 button {
     z-index: -2;
+}
+
+#m-or-t, #relYear {
+    color: greenyellow;
 }
