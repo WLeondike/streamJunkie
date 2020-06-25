@@ -41,5 +41,9 @@ $("button").on('click', (evt) => {
         console.log(`Response for movies ${JSON.stringify(response)}`);
         //storing the data from the ajax request in the genre variable
         console.log(response);
+
+        for (let i = 0; response.results[i].vote_average > 5; i++) {
+            console.log(response.results[i].vote_average);
+        }
     })
 });
