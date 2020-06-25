@@ -45,6 +45,10 @@ $("button").on('click', (evt) => {
 
         for (let i = 0; response.results[i].vote_average > 5; i++) {
             console.log(response.results[i].vote_average);
+            $("#movie-name").html("Movie Name: " + response.results[i].original_title);
+            $("#movieDetails").html(response.results[i].overview);
+            $("#movieReleaseDate").html(response.results[i].release_date);
+            $("#current-pic").attr("src", "https://image.tmdb.org/t/p/w600_and_h900_bestv2" + response.results[i].poster_path)
         }
     })
 });
