@@ -31,7 +31,7 @@ $("button").on('click', (evt) => {
     let movieYear = $("#movie_name").val();
     console.log(`Locals ${genreId} and ${movieYear}`);
     //Ajax
-    var queryURL = "https://api.themoviedb.org/3/discover/movie/?with_genres=" + genreId + "&primary_release_year=" + movieYear + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
+    var queryURL = "https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/discover/movie/?with_genres=" + genreId + "&primary_release_year=" + movieYear + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -40,9 +40,7 @@ $("button").on('click', (evt) => {
         console.log(`Response for movies ${JSON.stringify(response)}`);
         //storing the data from the ajax request in the genre variable
         console.log(response);
-
         for (let i = 0; response.results[i].vote_average > 5; i++) {
-            console.log(response.results[i].vote_average);
             $("#movie-name").html("Movie Name: " + response.results[i].original_title);
             $("#movieDetails").html(response.results[i].overview);
             $("#movieReleaseDate").html(response.results[i].release_date);
