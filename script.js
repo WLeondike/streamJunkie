@@ -26,14 +26,13 @@ streamSearch();
 
 //This function is picking out what movie genre the user wants
 
-$("#data-mdb").on("click", (evt) => {
+$(document).on('click', (evt) => {
     evt.preventDefault();
     let genreId = $("#genre").val();
-    let movieYear = $("movie_name").val();
-    let movieYearTrim = movieYear.val().trim();
+    let movieYear = $("#movie_name").val();
     console.log(`Locals ${genreId} and ${movieYear}`);
     //Ajax
-    var queryURL = "https://api.themoviedb.org/3/discover/movie/?with_genres=" + genreId + "&primary_release_year=" + movieYearTrim + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
+    var queryURL = "https://api.themoviedb.org/3/discover/movie/?with_genres=" + genreId + "&primary_release_year=" + movieYear + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -41,6 +40,5 @@ $("#data-mdb").on("click", (evt) => {
     }).then(function (response) {
         console.log(`Response for movies ${JSON.stringify(response)}`);
         //storing the data from the ajax request in the genre variable
-
     })
 });
