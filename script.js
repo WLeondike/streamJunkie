@@ -1,5 +1,4 @@
 //GLOBALS
-i = 0;
 
 $("usrSearch").on('click', (evt) => {
     evt.preventDefault();
@@ -19,14 +18,13 @@ $("usrSearch").on('click', (evt) => {
     $.ajax(settings).then(function (response) {
         console.log(JSON.stringify(response));
 
-        // console.log(results.locations[i].display_name[i]);
+        console.log(response.results[i].locations[i].display_name);
 
     });
 
-})
+});
 
 //This function is picking out what movie genre the user wants
-
 $("button").on('click', (evt) => {
     evt.preventDefault();
     let genreId = $("#genre").val();
@@ -50,5 +48,5 @@ $("button").on('click', (evt) => {
             $("#movieReleaseDate").html(response.results[i].release_date);
             $("#current-pic").attr("src", "https://image.tmdb.org/t/p/w600_and_h900_bestv2" + response.results[i].poster_path)
         }
-    })
+    });
 });
