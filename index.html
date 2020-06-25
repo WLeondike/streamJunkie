@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css" class="css">
+  <title>StreamJunkie</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper" style="background-color: greenyellow;">
+      <a href="#" class="brand-logo center black-text">StreamJunkie</a>
+    </div>
+  </nav>
+  <div class="container">
+    <section class="hero" alt="StreamJunkie hero"></section>
+  <div class="col-6">
+    <div class="row">
+      <label>Movie or TV Show Select</label>
+      <select class="browser-default">
+        <option value="" disabled selected>Choose your genre</option>
+        <option value="18">Comedy</option>
+        <option value="58">Horror</option>
+        <option value="20">Action</option>
+        <option value="90">Drama</option>
+      </select>
+  </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="movie_name" type="text" class="validate">
+          <label for="movie_name">Year</label>
+          <button class="btn waves-effect waves-light black-text" style="background-color:greenyellow;" type="submit"
+            name="action">Search</button>
+        </div>
+      </div>
+    </div>
+    </container>
+    <div class="row">
+      <div class="col-12 border border- m-3 rounded">
+        <div class="row">
+          <div class="col-12">
+            <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
+            <img id="current-pic" src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+<footer class="footer-copyright center black-text" style="background-color: greenyellow;">
+  © 2020 Copyright, inc.
+</footer>
+
+</html>
