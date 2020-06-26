@@ -14,40 +14,57 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper" style="background-color: darkred">
-      <a href="#" class="brand-logo center white-text" id="logo">StreamJunkie</a>
-    </div>
-  </nav>
-
+  <section>
+    <nav>
+      <div class="nav-wrapper" style="background-color: darkred">
+        <a href="./index.html" class="brand-logo center white-text" id="logo">StreamJunkie</a>
+      </div>
+    </nav>
+  </section>
   <br>
   <br>
   <div class="container">
 
     <section class="hero" alt="StreamJunkie hero"></section>
-    <div class="row">
-      <div class="input-field col s5">
-        <select class="browser-default" name="genre_id" id="genre">
-          <p id="m-or-t"></p>
-          <option value="" disabled selected>Choose your genre</option>
-          <option value="35">Comedy</option>
-          <option value="27">Horror</option>
-          <option value="28">Action</option>
-          <option value="18">Drama</option>
-        </select>
-      </div>
-      <div class="input-field col s4">
-        <input id="movie_name" type="text" class="validate">
-        <label for="movie_name" id="relYear">Year</label>
-        <button class="btn waves-effect waves-light white-text" style="background-color: rgb(211, 22, 22)" type="submit"
-          name="action">Search</button>
-      </div>
-    </div>
     <div class="row" id="typeText">
       <div class="input-field col s5">
         <input type="text" id="autocomplete-input" class="autocomplete background-color white">
         <button class="btn waves-effect waves-light white-text" style="background-color: rgb(211, 22, 22)" type="submit"
           name="action">Search</button> <span id="m-or-t" class="right input-text"> Type Movie or TV Show</span>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="input-field col s12">
+        <select name="genre_id" id="genre">
+          <option value="" disabled selected>Choose your genre</option>
+          <option value="28">Action</option>
+          <option value="12">Adventure</option>
+          <option value="16">Animation</option>
+          <option value="35">Comedy</option>
+          <option value="80">Crime</option>
+          <option value="99">Documentary</option>
+          <option value="18">Drama</option>
+          <option value="10751">Family</option>
+          <option value="14">Fantasy</option>
+          <option value="36">History</option>
+          <option value="27">Horror</option>
+          <option value="10402">Music</option>
+          <option value="9648">Mystery</option>
+          <option value="10749">Romance</option>
+          <option value="878">Science Fiction</option>
+          <option value="53">Thriller</option>
+          <option value="10752">War</option>
+          <option value="37">Western</option>
+        </select>
+      </div>
+
+      <div class="input-field col s4">
+        <input id="movie_name" type="text" class="validate">
+        <label for="movie_name" id="relYear">Year</label>
+        <button class="btn waves-effect waves-light white-text" style="background-color: rgb(211, 22, 22)" type="submit"
+          name="action">Search</button>
       </div>
       <div class="col-6 border border- m-3 rounded">
         <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
@@ -57,13 +74,13 @@
       </div>
     </div>
   </div>
+  <footer class="footer-copyright center white-text" style="background-color: darkred;">
+    © 2020 Copyright, inc.
+  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="script.js"></script>
 </body>
-<footer class="footer-copyright center white-text" style="background-color: darkred;">
-  © 2020 Copyright, inc.
-</footer>
 
 </html>

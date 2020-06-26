@@ -1,29 +1,33 @@
+$(document).ready(function(){
 //GLOBALS
-
-
-$("usrSearch").on('click', (evt) => {
-    evt.preventDefault();
-    let titleSearch = $("#usersTitle").val().trim();
-    console.log(titleSearch);
-    const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + titleSearch + "&country=us",
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-            "x-rapidapi-key": "14965806bdmsh587117962fb477cp1bb00bjsn47c1f05c6733"
+const movieArr = []
+const i = movieArr[Math.floor(Math.random() * movieArr.length)];    
+    
+    $('select').formSelect();
+  
+    $("usrSearch").on('click', (evt) => {
+        evt.preventDefault();
+        let titleSearch = $("#usersTitle").val().trim();
+        console.log(titleSearch);
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + titleSearch + "&country=us",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+                "x-rapidapi-key": "14965806bdmsh587117962fb477cp1bb00bjsn47c1f05c6733"
+            }
         }
-    }
 
-    $.ajax(settings).then(function (response) {
-        console.log(JSON.stringify(response));
+        $.ajax(settings).then(function (response) {
+            console.log(JSON.stringify(response));
 
-        console.log(response.results[i].locations[i].display_name);
+            console.log(response.results[i].locations[i].display_name);
+
+        });
 
     });
-
-});
 
 //This function is picking out what movie genre the user wants
 $("button").on('click', (evt) => {
@@ -63,7 +67,5 @@ $("button").on('click', (evt) => {
         $("#movieDetails").html(recommended.overview);
         $("#movieReleaseDate").html(recommended.release_date);
         $("#current-pic").attr("src", "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + recommended.poster_path)
-
-
     });
 });
