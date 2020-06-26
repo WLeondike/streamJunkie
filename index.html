@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Fontdiner+Swanky&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Fontdiner+Swanky&family=Khand:wght@600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css" class="css">
   <title>StreamJunkie</title>
@@ -19,11 +20,11 @@
     </div>
   </nav>
 
-  <!-- <br>
-    <section alt="StreamJunkie hero"></section> -->
   <br>
   <br>
   <div class="container">
+
+    <section class="hero" alt="StreamJunkie hero"></section>
     <div class="row">
       <div class="input-field col s5">
         <select class="browser-default" name="genre_id" id="genre">
@@ -42,7 +43,7 @@
           name="action">Search</button>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="typeText">
       <div class="input-field col s5">
         <input type="text" id="autocomplete-input" class="autocomplete background-color white">
         <button class="btn waves-effect waves-light white-text" style="background-color: rgb(211, 22, 22)" type="submit"

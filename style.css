@@ -1,16 +1,23 @@
 
 body {
-    background-image: url("assets/images/moviePost.jpeg");
+    background-image: url("assets/images/cinema.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-color:  rgba(52, 53, 52, 0.979); */
 }
 
 nav {
-    
+    box-shadow: rgba(0, 0, 0, 0.70) 2px 8px 20px 8px;
+    position: fixed;
+    top: 0;
+    z-index: +1;
 }
 
 #logo {
     font-size: xx-large;
-    font-family: 'Fontdiner Swanky', cursive;
+    font-family: 'Khand', sans-serif;
 }
+
 .hero{
     height: 400px;
     width: 100%;
@@ -37,6 +44,7 @@ footer {
     text-align: center;
     padding-top: 20px;
     z-index: +1;
+    box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 2px 10px;
 }
 
 button {
@@ -45,4 +53,13 @@ button {
 
 #m-or-t, #relYear {
     color:white;
+    font-family: 'Fontdiner Swanky', cursive;
+}
+
+.year {
+    float: left;
+}
+
+#typeText {
+    margin-bottom: 70px;
 }
