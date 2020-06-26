@@ -29,7 +29,7 @@ nav {
 }
 
 .input-field, .row {
-    background-color:  rgba(190, 110, 110, 0.479);
+    background-color:  rgba(160, 78, 78, 0.863);
 }
 
 .col {
@@ -55,7 +55,6 @@ button {
     color:white;
     font-family: 'Fontdiner Swanky', cursive;
 }
-
 
 .year {
     float: left;
