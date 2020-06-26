@@ -7,7 +7,7 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link
-    href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Fontdiner+Swanky&family=Khand:wght@600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Fontdiner+Swanky&family=Khand:wght@600&family=Mitr:wght@500&family=Pontano+Sans&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css" class="css">
   <title>StreamJunkie</title>
@@ -26,17 +26,18 @@
   <div class="container">
 
     <section class="hero" alt="StreamJunkie hero"></section>
+
     <div class="row" id="typeText">
       <div class="input-field col s5">
         <input type="text" id="autocomplete-input" class="autocomplete background-color white">
         <button class="btn waves-effect waves-light white-text" style="background-color: rgb(211, 22, 22)" type="submit"
-          name="action">Search</button> <span id="m-or-t" class="right input-text"> Type Movie or TV Show</span>
+          name="action">Search</button> <span id="m-or-t" class="right input-text">Movie or Television Title</span>
       </div>
-    </div>
 
 
-    <div class="row">
-      <div class="input-field col s12">
+
+
+      <div class="input-field col s12" id="input-genre">
         <select name="genre_id" id="genre">
           <option value="" disabled selected>Choose your genre</option>
           <option value="28">Action</option>
@@ -63,11 +64,13 @@
       <div class="input-field col s4">
         <input id="movie_name" type="text" class="validate">
         <label for="movie_name" id="relYear">Year</label>
-        <button class="btn waves-effect waves-light white-text" style="background-color: rgb(211, 22, 22)" type="submit"
+        <button class="btn waves-effect white-text" style="background-color: rgb(211, 22, 22)" type="submit"
           name="action">Search</button>
       </div>
-      <div class="col-6 border border- m-3 rounded">
-        <span id="movie-name" class="movie-name font-weight-bold align-middle"></span>
+    </div>
+    <div class="row" id="fromJS">
+      <div class="col-12 border border- m-3 rounded">
+        <h4 id="movie-name" class="movie-name font-weight-bold align-middle"></h4>
         <p id="movieDetails"></p>
         <p id="movieReleaseDate"></p>
         <img id="current-pic" src="" alt="">
