@@ -29,7 +29,7 @@ nav {
 }
 
 .input-field, .row {
-    background-color:  rgba(160, 78, 78, 0.863);
+    background-color:  grey;
 }
 
 .col {
@@ -52,8 +52,10 @@ button {
 }
 
 #m-or-t, #relYear {
-    color:white;
+    color:rgb(206, 187, 187);
     font-family: 'Fontdiner Swanky', cursive;
+    
+    
 }
 
 .year {
@@ -63,3 +65,9 @@ button {
 #typeText {
     margin-bottom: 70px;
 }
+
+.dropdown-content {
+    max-height: 350px !important;
+    overflow-y: auto !important;
+    backface-visibility: hidden !important;
+ }
