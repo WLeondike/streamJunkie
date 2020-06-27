@@ -1,33 +1,39 @@
 $(document).ready(function () {
-    //GLOBALS
-    const movieArr = []
-    const i = movieArr[Math.floor(Math.random() * movieArr.length)];
 
     $('select').formSelect();
 
-    $("usrSearch").on('click', (evt) => {
-        evt.preventDefault();
-        let titleSearch = $("#usersTitle").val().trim();
-        console.log(titleSearch);
+    $("button").on("click", function(){
+        const usrSearch = $("#streamServ").val()
         const settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + titleSearch + "&country=us",
+            "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + usrSearch + "&country=us",
             "method": "GET",
             "headers": {
-                "x-rapidapi-host": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+                "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
                 "x-rapidapi-key": "14965806bdmsh587117962fb477cp1bb00bjsn47c1f05c6733"
             }
         }
-
-        $.ajax(settings).then(function (response) {
-            console.log(JSON.stringify(response));
-
-            console.log(response.results[i].locations[i].display_name);
-
+        
+        $.ajax(settings).done(function (response) {
+            // console.log(response);
+            // console.log(response.results[0].locations[0].display_name);
+            
+            for (let i = 0; i < response.results[i].locations[i].display_name; i++) {
+                $(".sourceOutput").html(response.results[i].locations[i].display_name);
+                
+            }
         });
-
     });
+
+    const queryTestURL = "https://www.omdbapi.com/?t=it&apikey=2b834777"
+    $.ajax({
+        url: queryTestURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+    });
+   
 
     //This function is picking out what movie genre the user wants
     $("button").on('click', (evt) => {
