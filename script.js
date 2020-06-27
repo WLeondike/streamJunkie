@@ -45,7 +45,6 @@ $(document).ready(function () {
             let recArray = [];
             // array.filter(result => result.vote_average > 5)
             // Check for highly voted movies 
-
             // Loop over the movies with a vote average above 5
             for (let i = 0; response.results[i]; i++) {
 
