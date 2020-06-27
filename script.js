@@ -36,11 +36,12 @@ $(document).ready(function () {
         let movieYear = $("#movie_name").val();
         console.log(`Locals ${genreId} and ${movieYear}`);
         //Ajax
-        var queryURL = "https://api.themoviedb.org/3/discover/movie/?with_genres=" + genreId + "&primary_release_year=" + movieYear + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
+        var queryURL = "https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/discover/movie/?with_genres=" + genreId + "&primary_release_year=" + movieYear + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
         $.ajax({
+            
             url: queryURL,
             method: "GET",
-            dataType: "jsonp"
+            dataType: "jsonp",
         }).then(function (response) {
             console.log(`Response for movies ${JSON.stringify(response)}`);
             //storing the data from the ajax request in the genre variable
