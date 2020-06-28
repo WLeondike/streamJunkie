@@ -46,13 +46,17 @@ footer {
 button {
     z-index: -2;
     box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 2px 10px;
+
     color: rgb(127, 177, 253);
+
 }
 #m-or-t, #relYear {
+
     color: rgb(127, 177, 253);
     font-family: 'Pontano Sans', sans-serif;
     font-weight: bolder;
     font-size: larger;
+
 }
 .year {
     float: left;
@@ -63,6 +67,7 @@ button {
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 2px 10px;
 }
+
 #input-genre {
     position: relative;
     bottom: 20px;
@@ -74,19 +79,23 @@ button {
     overflow-y: auto !important;
     backface-visibility: hidden !important;
  }
+
  #current-pic{
      padding-top: 20px;
      border-style: groove;
      border-color: rgb(127, 177, 253);;
      box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 2px 10px;
  }
+
  .movie-name{
      font-weight: bolder;
      text-align: center;
  }
+
  #movieDetails{
      font-weight: bold;
  }
+
  #fromJS {
     background-color: rgba(197, 151, 151, 0.541);
     position: relative;
@@ -94,16 +103,19 @@ button {
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 2px 10px;
  }
+
  .col {
      background: transparent;
  }
  #movie-name, .movie-name {
+
     font-family: 'Khand', sans-serif;
     justify-content: center;
     text-align: center;
     color: white;
     padding-top: 15px;
  }
+
  #movieDetails {
      float: right;
  }

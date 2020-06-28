@@ -1,36 +1,46 @@
 $(document).ready(function () {
-    //GLOBALS
-    const movieArr = []
-    const i = movieArr[Math.floor(Math.random() * movieArr.length)];
 
     $('select').formSelect();
 
-    $("usrSearch").on('click', (evt) => {
-        evt.preventDefault();
-        let titleSearch = $("#usersTitle").val().trim();
-        console.log(titleSearch);
+    $("#movieSearch").on("click", function(){
+        const usrSearch = $("#streamServ").val()
         const settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + titleSearch + "&country=us",
+            "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=it&country=us",
             "method": "GET",
             "headers": {
-                "x-rapidapi-host": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+                "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
                 "x-rapidapi-key": "14965806bdmsh587117962fb477cp1bb00bjsn47c1f05c6733"
             }
         }
+        
 
-        $.ajax(settings).then(function (response) {
-            console.log(JSON.stringify(response));
-
-            console.log(response.results[i].locations[i].display_name);
-
+        $.ajax(settings).done(function (response) {
+            // console.log(response);
+            // console.log(response.results[0].locations[0].display_name);
+            
+            for (let i = 0; i < data.results[i].locations[i].length; i++) {
+                $(".sourceOutput").html(response.results[0].locations[i]["display_name"]);
+                
+            }
         });
-
     });
 
-    //This function is picking out what movie genre the user wants
-    $("button").on('click', (evt) => {
+    //     $.ajax(settings).done(function (response) {
+    //         const data = response
+    //         // console.log(response);
+            
+    //         // results[0].locations
+    //      for (let i = 0; i < data.results[i].locations[i].length; i++) {
+    //             console.log("Movie Results: ", data.results[i].locations[i]["display_name"]);
+    //             $(".sourceOutput").html(response.results[0].locations[i]["display_name"]);    
+    //         }
+    //     });
+    // });
+
+    // This function is picking out what movie genre the user wants
+    $("#random").on('click', (evt) => {
         evt.preventDefault();
         let genreId = $("#genre").val();
         let movieYear = $("#movie_name").val();
@@ -44,14 +54,12 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(`Response for movies ${JSON.stringify(response)}`);
             //storing the data from the ajax request in the genre variable
-            console.log(response);
+            // console.log(response);
             let recArray = [];
             // array.filter(result => result.vote_average > 5)
             // Check for highly voted movies 
-
             // Loop over the movies with a vote average above 5
             for (let i = 0; response.results[i]; i++) {
-
                 if (response.results[i].vote_average > 5) {
                     // Add the highly voted movies to an array
                     recArray.push(response.results[i])
