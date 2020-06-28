@@ -18,6 +18,7 @@ nav {
     font-family: 'Khand', sans-serif;
     text-decoration-color:  rgb(41, 122, 243);
     color: rgb(127, 177, 253);
+    text-shadow: aqua 2px 2px;
 }
 
 .hero{
@@ -90,6 +91,9 @@ button {
 
  #current-pic{
      padding-top: 20px;
+     border-style: groove;
+     border-color: rgb(127, 177, 253);;
+     box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 2px 10px;
  }
 
  .movie-name{
