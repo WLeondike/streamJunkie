@@ -47,6 +47,7 @@ $(document).ready(function () {
             }
             //for loop to loop through the contents of the response array
             $.ajax(settings).done(function (response) {
+                $(".streamTitle").html("Movie is available at: ")
                 for (let i = 0; i < response.results[0].locations.length; i++) {
                     $(".sourceOutput").append(`<p> ${response.results[0].locations[i].display_name} </p>`);
                 }
