@@ -89,7 +89,7 @@ button {
  }
 
  #current-pic{
-     padding-top: 20px;
+     
      border-style: groove;
      border-color: rgb(127, 177, 253);;
      box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 2px 10px;
@@ -100,8 +100,8 @@ button {
      text-align: center;
  }
 
- #movieDetails{
-     font-size: 10px;
+ #movieDetails, #movieReleaseDate{
+     font-size: 15px;
      font-weight: bold;
  }
    

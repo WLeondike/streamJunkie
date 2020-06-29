@@ -45,6 +45,7 @@ $(document).ready(function () {
     // });
 
     // This function is picking out what movie genre the user wants
+
     $("#random").on('click', (evt) => {
         $(".sourceOutput").empty();
         evt.preventDefault();
