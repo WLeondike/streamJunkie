@@ -2,35 +2,40 @@ $(document).ready(function () {
 
     $('select').formSelect();
 
-    $("#movieSearch").on("click", function(){
-        const usrSearch = $("#streamServ").val()
-        const settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=it&country=us",
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-                "x-rapidapi-key": "14965806bdmsh587117962fb477cp1bb00bjsn47c1f05c6733"
-            }
-        }
-        
+    // $("#movieSearch").on("click", function () {
+        // const usrSearch = $("#streamServ").val()
+        // const settings = {
+        //     "async": true,
+        //     "crossDomain": true,
+        //     "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=jackass3d&country=us",
+        //     "method": "GET",
+        //     "headers": {
+        //         "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+        //         "x-rapidapi-key": "14965806bdmsh587117962fb477cp1bb00bjsn47c1f05c6733"
+        //     }
+        // }
 
-        $.ajax(settings).done(function (response) {
-            // console.log(response);
-            // console.log(response.results[0].locations[0].display_name);
-            
-            for (let i = 0; i < data.results[i].locations[i].length; i++) {
-                $(".sourceOutput").html(response.results[0].locations[i]["display_name"]);
-                
-            }
-        });
-    });
+
+        // $.ajax(settings).done(function (response) {
+        //     console.log(response);
+
+
+        //     for (let i = 0; i < response.results.length; i++) {
+        //         console.log(response.results[0].locations[0]["display_name"]);
+        //         for (let j = 0; j < response.results[i].locations.length; j++) {
+        //             console.log(response.results[i].locations[j].display_name);
+        //             // $(".sourceOutput").text(response.results[i].locations[j].display_name);
+        //             $(".sourceOutput").append(`<p> ${response.results[i].locations[j].display_name} </p>`);
+        //         }
+
+        //     }
+        // });
+    // });
 
     //     $.ajax(settings).done(function (response) {
     //         const data = response
     //         // console.log(response);
-            
+
     //         // results[0].locations
     //      for (let i = 0; i < data.results[i].locations[i].length; i++) {
     //             console.log("Movie Results: ", data.results[i].locations[i]["display_name"]);
@@ -40,7 +45,9 @@ $(document).ready(function () {
     // });
 
     // This function is picking out what movie genre the user wants
-    $("button").on('click', (evt) => {
+
+    $("#random").on('click', (evt) => {
+        $(".sourceOutput").empty();
         evt.preventDefault();
         let genreId = $("#genre").val();
         let movieYear = $("#movie_name").val();
@@ -75,6 +82,29 @@ $(document).ready(function () {
             $("#movieDetails").html(recommended.overview);
             $("#movieReleaseDate").html(recommended.release_date);
             $("#current-pic").attr("src", "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + recommended.poster_path)
+            const usrSearch = $("#streamServ").val()
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" + recommended.original_title + "&country=us",
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+                    "x-rapidapi-key": "14965806bdmsh587117962fb477cp1bb00bjsn47c1f05c6733"
+                }
+            }
+
+
+            $.ajax(settings).done(function (response) {
+                console.log("response: ", response);
+
+
+                for (let i = 0; i < response.results[0].locations.length; i++) {
+                    console.log(response.results[0].locations[i].display_name);
+                    // $(".sourceOutput").text(response.results[i].locations[j].display_name);
+                    $(".sourceOutput").append(`<p> ${response.results[0].locations[i].display_name} </p>`);
+                }
+            });
         });
     })
 });
