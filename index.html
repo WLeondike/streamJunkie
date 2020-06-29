@@ -27,8 +27,8 @@
   <div class="container">
     <section class="hero" alt="StreamJunkie hero"></section>
 
-    <div class="row">
-      <div class="input-field col s4">
+    <div class="row" id="inputRow">
+      <div class="input-field col s4" id="genCol">
         <select name="genre_id" id="genre">
           <option value="" disabled selected>Choose your genre</option>
           <option value="28">Action 🚔</option>
@@ -52,8 +52,8 @@
         </select>
       </div>
 
-      <div class="input-field col s4">
-        <input id="movie_name" type="text" class="validate">
+      <div class="input-field col s4" id="yearCol">
+        <input id="movie_name" type="text" class="validate" autocomplete="off">
         <label for="movie_name" id="relYear">Year</label>
         <button class="btn waves-effect" style="background-color: rgb(72, 74, 77);  color: rgb(118, 165, 236);"
           type="submit" name="action">Search</button>
@@ -69,7 +69,7 @@
         <img id="current-pic" src="" alt="" class="responsive-img">
       </div>
 
-      <div class="col s4"></div>
+      <div class="col s4 center"></div>
       <h5 class="streamTitle"></h5>
       <p class="sourceOutput"></p>
     </div>
