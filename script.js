@@ -40,7 +40,7 @@ $(document).ready(function () {
     // });
 
     // This function is picking out what movie genre the user wants
-    $("#random").on('click', (evt) => {
+    $("button").on('click', (evt) => {
         evt.preventDefault();
         let genreId = $("#genre").val();
         let movieYear = $("#movie_name").val();
