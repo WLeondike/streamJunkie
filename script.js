@@ -29,7 +29,7 @@ $(document).ready(function () {
             let recommended = recArray[Math.floor(Math.random() * recArray.length)];
 
             //Show the movie information on the page
-            $("#movie-name").html("Movie Name: " + recommended.original_title);
+            $("#movie-name").html(recommended.original_title);
             $("#movieDetails").html(recommended.overview);
             $("#movieReleaseDate").html(recommended.release_date);
             $("#current-pic").attr("src", "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + recommended.poster_path)
