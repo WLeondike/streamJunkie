@@ -45,6 +45,7 @@ $(document).ready(function () {
                     "x-rapidapi-key": "14965806bdmsh587117962fb477cp1bb00bjsn47c1f05c6733"
                 }
             }
+            
             //for loop to loop through the contents of the response array
             $.ajax(settings).done(function (response) {
                 $(".streamTitle").html("Movie is available at: ")
