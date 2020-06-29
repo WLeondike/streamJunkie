@@ -21,10 +21,10 @@ The frameworks used in this project are:
 - jQuery
 - JavaScript(vanilla)
 
-# screenshot
-<img src ="/assets/images/" width="500">
+## Screenshot
+<img src ="./assets/images/screenshot.png" width="500">
 
-# link to deployed app
+## Link to Deployed App
 
 Check out our site here: https://wleondike.github.io/streamJunkie/
 
