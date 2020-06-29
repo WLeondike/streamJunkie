@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,11 @@
   <link rel="stylesheet" href="style.css" class="css">
   <title>StreamJunkie</title>
 </head>
+
 <body>
   <section>
     <nav>
-      <div class="nav-wrapper" style="background-color:rgb(0, 0, 0)">
+      <div class="nav-wrapper" style="background-color: rgb(0, 0, 0) ">
         <a href="./index.html" class="brand-logo center" id="logo">StreamJunkie</a>
       </div>
     </nav>
@@ -27,47 +29,41 @@
     <div class="row" id="typeText">
       <div class="input-field col s5">
         <input type="text" id="streamServ" class="autocomplete background-color white">
-
         <button class="btn waves-effect waves-light"
-          style="background-color: rgb(72, 74, 77); color: rgb(127, 177, 253);" type="submit"
-
+          style="background-color: rgb(72, 74, 77); color: rgb(53, 110, 196);" type="submit"
           name="action">Search</button> <span id="m-or-t" class="right input-text">Movie or Television Title</span>
       </div>
-      <p class="sourceOutput"></p>
+      <div class="sourceOutput"></div>
     </div>
-
     <div class="row">
       <div class="input-field col s4">
         <select name="genre_id" id="genre">
           <option value="" disabled selected>Choose your genre</option>
-
-          <option value="28">Action :oncoming_police_car:</option>
-          <option value="12">Adventure :national_park:</option>
-          <option value="16">Animation :robot_face:</option>
-          <option value="35">Comedy :rolling_on_the_floor_laughing:</option>
-          <option value="80">Crime :sleuth_or_spy:</option>
-          <option value="99">Documentary :classical_building:</option>
-          <option value="18">Drama :sweat:</option>
-          <option value="10751">Family :man-girl-boy:</option>
-          <option value="14">Fantasy :female_fairy:</option>
-          <option value="36">History :timer_clock:</option>
-          <option value="27">Horror :scream:</option>
-          <option value="10402">Music :musical_note:</option>
-          <option value="9648">Mystery :exploding_head:</option>
-          <option value="10749">Romance :cupid:</option>
-          <option value="878">Science Fiction :male-scientist::newspaper:</option>
-          <option value="53">Thriller :cold_sweat:</option>
-          <option value="10752">War :skull_and_crossbones:</option>
-          <option value="37">Western :face_with_cowboy_hat:</option>
-
+          <option value="28">Action 🚔</option>
+          <option value="12">Adventure 🏞</option>
+          <option value="16">Animation 🐯</option>
+          <option value="35">Comedy 🤣</option>
+          <option value="80">Crime 🕵</option>
+          <option value="99">Documentary 🎬</option>
+          <option value="18">Drama 😓</option>
+          <option value="10751">Family 👨‍👧‍👦</option>
+          <option value="14">Fantasy 🧚‍♀️</option>
+          <option value="36">History ⏲</option>
+          <option value="27">Horror 😱</option>
+          <option value="10402">Music 🎵</option>
+          <option value="9648">Mystery 🤯</option>
+          <option value="10749">Romance 💘</option>
+          <option value="878">Science Fiction 🤖</option>
+          <option value="53">Thriller 😰</option>
+          <option value="10752">War ⚔️</option>
+          <option value="37">Western 🤠</option>
         </select>
       </div>
       <div class="input-field col s4">
         <input id="movie_name" type="text" class="validate">
         <label for="movie_name" id="relYear">Year</label>
-
-        <button class="btn waves-effect white-text" style="background-color: rgb(72, 74, 77); color: rgb(127, 177, 253);" type="submit"
-
+        <button class="btn waves-effect"
+          style="background-color: rgb(72, 74, 77); color: rgb(53, 110, 196);" type="submit"
           name="action">Search</button>
         <div class="col-6">
           <p id="movieDetails" class="flow-text"></p>
@@ -80,17 +76,15 @@
       </div>
     </div>
   </div>
-
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="script.js"></script>
 </body>
-
 <div>
   <footer class="footer-copyright center" style="background-color:rgb(0, 0, 0)">
     © 2020 Copyright, inc.
   </footer>
 </div>
+
 </html>
