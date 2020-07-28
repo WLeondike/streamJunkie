@@ -25,7 +25,7 @@ The frameworks used in this project are:
 - JavaScript(vanilla)
 
 ## Screenshot
-<img src ="./assets/images/screenshot.png" width="500">
+<img src ="./public/assets/images/screenshot.png" width="500">
 
 ## Link to Deployed App
 
