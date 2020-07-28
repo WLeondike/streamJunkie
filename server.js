@@ -13,12 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
-app.get("/", function (req, res) {
+app.get("/",(req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function () {
+app.listen(PORT, () => {
   console.log(`app listening on: http://localhost:${PORT}`);
 });
