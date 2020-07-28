@@ -1,13 +1,19 @@
 # Stream Junkie
 
-In this project we will be creating our own website with two APIs included. Those APIs are:   
+In this project we will be creating our own application with two APIs included. Those APIs are:   
 
 - utelly
     - utelly is a service that will allow the search input to display the best streaming service option.
 - the movie database(tmdb)
     - the movie database(tmdb) will allow the search to come up with ratings, descriptions, and reviews.
     
-The site we have created will allow the user to find a random movie in our list of genres. Once the user selects a genre, they can input a year and hit search. Every time the user hits search, a new movie will appear from that genre and year. The movies poster, description, year of release, and the streaming services you'd be able to watch them on will appear on the screen.
+The application we have created will allow the user to find a random movie in our list of genres. Once the user selects a genre, they can input a year and hit search. Every time the user hits search, a new movie will appear from that genre and year. The movies poster, description, year of release, and the streaming services you'd be able to watch them on will appear on the screen.
+
+Contributors: <br>
+  - [Anthony Aguiar](https://github.com/EpicGibbon) <br>
+  - [Derek D'Esposito](https://github.com/Derekdespo) <br>
+  - [Mike A](https://github.com/eradicador) <br>
+  - [William Leondike](https://github.com/WLeondike) <br>
 
 ## Frameworks
 
