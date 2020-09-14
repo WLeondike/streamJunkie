@@ -42,7 +42,7 @@ The frameworks used in this project are:
 
 ## Application
 
-Check out our application here: https://wleondike.github.io/streamJunkie/
+Check out our application here: https://stream-junkie.herokuapp.com/
 
 
 ## License
