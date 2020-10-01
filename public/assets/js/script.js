@@ -8,7 +8,7 @@ $(document).ready(function () {
         let genreId = $("#genre").val();
         let movieYear = $("#movie_name").val();
         //first ajax call
-        var queryURL = "https://api.themoviedb.org/3/discover/movie/?with_genres=" + genreId + "&primary_release_year=" + movieYear + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=" + genreId + "&primary_release_year=" + movieYear + "&api_key=52cc32f4af978457c9927f10c080f307&language=en-US";
         $.ajax({
             url: queryURL,
             method: "GET",
